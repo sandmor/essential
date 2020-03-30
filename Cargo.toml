@@ -13,4 +13,4 @@ homepage = "https://crates.io/crates/essential"
 repository = "https://github.com/sandmor/essential"
 
 [dependencies]
-ptable = "*"
+ptable = "0"
