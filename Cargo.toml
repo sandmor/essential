@@ -1,0 +1,16 @@
+[package]
+name = "essential"
+version = "0.1.0"
+authors = ["sandmor <sandmor1220@gmail.com>"]
+edition = "2018"
+description = "Types for elements, ions and isotopes, the essential and basic units of the matter"
+categories = ["science"]
+keywords = ["chemistry", "chemical", "atoms"]
+license = "MIT"
+readme = "README.md"
+documentation = "https://docs.rs/essential/"
+homepage = "https://crates.io/crates/essential"
+repository = "https://github.com/sandmor/essential"
+
+[dependencies]
+ptable = "*"
