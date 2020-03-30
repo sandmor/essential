@@ -1,20 +1,17 @@
-use std::num::NonZeroU8;
-use ptable::Element;
-
-pub use ptable::*;
+pub use ptable::Element;
 
 #[derive(Debug, Copy, Clone, Eq, PartialEq, Ord, PartialOrd, Hash)]
 pub struct Isotope {
     ion: Ion,
-    neutrons: Option<NonZeroU8>
+    neutrons: Option<u16>
 }
 
 impl Isotope {
-    pub fn new(ion: Ion, neutrons: Option<NonZeroU8>) -> Isotope {
+    pub fn new(ion: Ion, neutrons: Option<u16>) -> Isotope {
         Isotope { ion, neutrons }
     }
 
-    pub fn from_element(element: Element, neutrons: Option<NonZeroU8>) -> Isotope {
+    pub fn from_element(element: Element, neutrons: Option<u16>) -> Isotope {
         Self::new(Ion::from(element), neutrons)
     }
 
@@ -29,12 +26,12 @@ impl Isotope {
     }
 
     #[inline(always)]
-    pub fn get_neutrons_count(&self) -> &Option<NonZeroU8> {
+    pub fn get_neutrons_count(&self) -> &Option<u16> {
         &self.neutrons
     }
 
     #[inline(always)]
-    pub fn get_neutrons_count_mut(&mut self) -> &mut Option<NonZeroU8> {
+    pub fn get_neutrons_count_mut(&mut self) -> &mut Option<u16> {
         &mut self.neutrons
     }
 
